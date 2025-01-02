@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Issue Book</title>
+</head>
+<body>
+    <h1>Issue a Book</h1>
+    <form action="/issue" method="POST" enctype="multipart/form-data">
+        <input type="text" name="title" placeholder="Book Title" required />
+        <input type="text" name="author" placeholder="Author" required />
+        <input type="text" name="name" placeholder="User Name" required />
+        <input type="email" name="email" placeholder="User Email" required />
+        <input type="tel" name="phone" placeholder="User Phone" required />
+        <input type="file" name="bookImage" accept="image/*" required />
+        <button type="submit">Issue Book</button>
+    </form>
+</body>
+</html>

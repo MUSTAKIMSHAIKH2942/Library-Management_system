@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Library Management</title>
+</head>
+<body>
+    <h1>Issued Books</h1>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>User</th>
+            <th>Issued Date</th>
+            <th>Return Date</th>
+        </tr>
+        <% books.forEach(book => { %>
+        <tr>
+            <td><%= book.title %></td>
+            <td><%= book.author %></td>
+            <td><%= book.user.name %> (<%= book.user.email %>)</td>
+            <td><%= book.issuedDate.toDateString() %></td>
+            <td><%= book.returnDate.toDateString() %></td>
+        </tr>
+        <% }) %>
+    </table>
+    <a href="/issue">Issue a New Book</a>
+</body>
+</html>
